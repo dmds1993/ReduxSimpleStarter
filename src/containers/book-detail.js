@@ -17,6 +17,7 @@ class BookDetail extends Component {
 }
 
 const mapStateToProps = (state) => {
+    console.log(state)
     return {
         book: state.activeBook
     }
