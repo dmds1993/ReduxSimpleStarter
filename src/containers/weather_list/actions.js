@@ -11,7 +11,7 @@ export const fetchWeather = (city) => {
 
     const request = axios.get(url);
 
-    console.log('Request', request);
+    console.log('Request', request === "pending");
 
     return {
         type: FETCH_WEATHER,

@@ -33,6 +33,7 @@ class SearchBar extends Component {
                     value={this.state.term}
                     onChange={this.onInputChange}
                 />
+                {console.log(this.props.teste)}
                 <span className="input-group-btn">
                     <button type="submit" className="btn btn-secundary">Submit
                     </button>
@@ -46,4 +47,10 @@ const mapDispatchToProps = (dispatch) => {
     return bindActionCreators({ fetchWeather }, dispatch);
 }
 
-export default connect(null, mapDispatchToProps)(SearchBar);
+const mapStateToProps = (state) => {
+    return {
+        teste: state
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);
